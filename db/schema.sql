@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS destinations (slug TEXT PRIMARY KEY, name TEXT, state TEXT, region TEXT, type TEXT, emoji TEXT, vibes TEXT, best_months TEXT, spend_low INTEGER, spend_high INTEGER, suits TEXT, lat REAL, lon REAL, stays_slug TEXT);
+CREATE TABLE IF NOT EXISTS spots (id TEXT PRIMARY KEY, dest TEXT, name TEXT, category TEXT, travel_min INTEGER, duration_min INTEGER, indoor INTEGER, suits TEXT, priority INTEGER);
+CREATE TABLE IF NOT EXISTS properties (slug TEXT PRIMARY KEY, name TEXT, dest TEXT);
+CREATE TABLE IF NOT EXISTS submissions (id TEXT PRIMARY KEY, dest TEXT, grp TEXT, comment TEXT, device TEXT, created_at TEXT, helpful INTEGER DEFAULT 0, sample INTEGER DEFAULT 0);
+CREATE TABLE IF NOT EXISTS ratings (id INTEGER PRIMARY KEY AUTOINCREMENT, submission_id TEXT, spot_id TEXT, score INTEGER, tag TEXT);
+CREATE TABLE IF NOT EXISTS helpful (submission_id TEXT, device TEXT, PRIMARY KEY (submission_id, device));
+CREATE TABLE IF NOT EXISTS photos (id TEXT PRIMARY KEY, dest TEXT, spot_id TEXT, r2_key TEXT, taken_at TEXT, uploaded_at TEXT, verified INTEGER, hidden INTEGER DEFAULT 0, reports INTEGER DEFAULT 0, device TEXT, sample INTEGER DEFAULT 0);
+CREATE TABLE IF NOT EXISTS reports (photo_id TEXT, device TEXT, PRIMARY KEY (photo_id, device));
+CREATE TABLE IF NOT EXISTS services (id TEXT PRIMARY KEY, dest TEXT, kind TEXT, name TEXT, note TEXT, updated_at TEXT);
+CREATE TABLE IF NOT EXISTS updates (id TEXT PRIMARY KEY, dest TEXT, category TEXT, text TEXT, created_at TEXT, expires_at TEXT);
+CREATE TABLE IF NOT EXISTS events (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, device TEXT, day TEXT);
+CREATE INDEX IF NOT EXISTS i_sub_dest ON submissions(dest, created_at);
+CREATE INDEX IF NOT EXISTS i_rat_spot ON ratings(spot_id);
+CREATE INDEX IF NOT EXISTS i_photo_dest ON photos(dest, hidden);
+CREATE INDEX IF NOT EXISTS i_ev ON events(day, name);

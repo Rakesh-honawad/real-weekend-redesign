@@ -1,0 +1,12 @@
+name = "real-weekend"
+compatibility_date = "2025-01-01"
+pages_build_output_dir = "out"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "real-weekend"
+database_id = "REPLACE_WITH_ID_FROM_wrangler_d1_create"
+
+[[r2_buckets]]
+binding = "PHOTOS"
+bucket_name = "real-weekend-photos"
