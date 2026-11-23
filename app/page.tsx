@@ -44,7 +44,7 @@ export default function Home() {
   const by = (f: (d: Destination) => number, n = 6) => [...(all || [])].sort((a, b) => f(b) - f(a)).slice(0, n)
   return <><Header /><main className="home-wrap">
     <section className="hero"><p className="eyebrow">REAL NOTES. REAL WEEKENDS.</p><h1>Know a place<br className="desktop-break"/> before you go<span className="dot">.</span></h1><p className="hero-sub">Honest ratings, recent photos and local tips from people who have actually been.</p>
-      <label className="search-pill"><span aria-hidden="true">⌕</span><input type="search" aria-label="Search places by name" placeholder="Where are you thinking?" value={q} onChange={e => setQ(e.target.value)} /><kbd>⌘ K</kbd></label>
+      <label className="search-pill"><span aria-hidden="true">⌕</span><input type="search" aria-label="Search places by name" placeholder="Where are you thinking?" value={q} onChange={e => setQ(e.target.value)} /></label>
     </section>
     <div className="filter-toolbar"><section className="chip-strip"><span className="toolbar-label">The mood</span>{VIBES.map(v => <Chip key={v} on={vibe === v} onClick={() => pick(vibe, v, setVibe, "")}>{cap(v)}</Chip>)}</section>
       <section className="travelling"><span className="toolbar-label">Travelling as</span><div className="segmented">{GROUPS.map(g => <button key={g} className={group === g ? "selected" : ""} aria-pressed={group === g} onClick={() => pick(group, g, setGroup, null)}>{cap(g)}</button>)}</div></section>
