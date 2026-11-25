@@ -1,11 +1,25 @@
 # Real Weekend
 
-**A Glassdoor / AmbitionBox for tourist places.** Travellers read short, honest, recent ratings, photos and local updates for a weekend destination *before* they plan or book. No login, no AI at runtime, free to run.
+**Know a place before you go.** A free weekend-trip planning companion: honest ratings and recent, dated traveller photos, plus the latest local updates, services and a Plan B, all in one place. Everything is about the *place*, not the stay. No login, no AI at runtime, free to run.
 
 > Built by Rakesh for the goSTOPS Build Sprint. Not an official goSTOPS product.
 
 **Live demo:** https://real-weekend.pages.dev
+
 **Admin:** https://real-weekend.pages.dev/admin  ->(required Password will be shared in email)
+
+---
+
+## What it does at a glance
+
+| What a short-trip traveller needs | What Real Weekend shows |
+| --- | --- |
+| Is it worth my time? | Short ratings, tag percentages (worth it, crowded, pricey, hidden gem, unsafe at night) and who rated |
+| What is it like right now? | Recent traveller photos, newest first, with the date taken. A 5-day forecast. Latest dated updates: closure, road, weather, transport, event, upcoming |
+| What should I do with limited time? | Spots ranked by rating, a "skip if short on time" list, and a *How long do you have?* planner (half day, full day, 2 days) |
+| What if plans go wrong? | A Plan B for rain or crowds, with indoor spots |
+| What do I need on the ground? | Services such as bike taxi, scooter rental and cafes |
+| How do I add my own experience? | A quick rating flow with up to 3 photos |
 
 ---
 
@@ -26,7 +40,6 @@
 13. [Roadmap](#roadmap)
 
 ---
-
 ## Why this exists
 
 People who are still deciding where to go for a short weekend trip jump between city pages, blog posts, maps and review sites. By the time they book, the research is already done somewhere else.
@@ -34,8 +47,14 @@ People who are still deciding where to go for a short weekend trip jump between 
 Real Weekend puts that research in one place:
 
 - **Who it is for:** Gen Z travellers, often solo, on Friday-night-to-Sunday-night trips.
-- **What it answers:** "Is this place worth my limited time, and what should I skip?"
-- **What makes it different:** reviews are about *places*, not hotels, and every photo shows when it was actually taken.
+- **What it answers:** "Is this place worth my limited time, what is happening there right now, and what do I do if plans change?"
+- **What makes it different:**
+  - Ratings are about *places*, not hotels.
+  - Every photo shows when it was actually taken.
+  - Ratings, recent updates, services and a Plan B are on one page, so there is no need to open five tabs.
+  - Updates expire automatically, so old notes do not stay up.
+
+**How the content stays fresh:** ratings and photos come from travellers. The weather forecast is automatic (Open-Meteo). Updates, events and services are added by the admin, and updates expire on their own.
 
 ## Features
 
