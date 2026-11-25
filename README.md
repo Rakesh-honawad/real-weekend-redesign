@@ -5,6 +5,7 @@
 > Built by Rakesh for the goSTOPS Build Sprint. Not an official goSTOPS product.
 
 **Live demo:** https://real-weekend.pages.dev
+**Admin:** https://real-weekend.pages.dev/admin  ->(required Password will be shared in email)
 
 ---
 
