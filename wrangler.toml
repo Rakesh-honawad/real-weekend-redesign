@@ -1,0 +1,10 @@
+name = "real-weekend"
+compatibility_date = "2025-01-01"
+pages_build_output_dir = "out"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "real-weekend"
+database_id = "b7cf07e4-f76a-462d-a930-7592f599f890"
+
+
